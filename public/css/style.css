@@ -1,0 +1,471 @@
+/*----------------------------------------------
+  [TABLE OF CONTENTS]
+
+  [SHARED STYLES]
+    VARIABLES
+    GENERAL
+    HEADER
+    NAVIGATION
+    MAIN CONTENT
+    FOOTER
+
+  [SITE-SPECIFIC STYLES]
+    HOME
+----------------------------------------------*/
+
+
+
+
+
+/*---------------------------------------------
+  $VARIABLES
+----------------------------------------------*/
+
+:root {
+  --content-width: 95%;
+  --text-color-black: #636363;
+  --color-navy: #436475;
+  --color-green: #1eb62d;
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --content-width: 65%;
+  }
+}
+
+@media (min-width: 2000px) {
+  :root {
+    --content-width: 1200px;
+  }
+}
+
+
+
+
+
+/*---------------------------------------------
+  $GENERAL
+----------------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+/*---------------------------------------------
+  $HEADER
+----------------------------------------------*/
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+     -ms-flex-pack: start;
+   justify-content: flex-start;
+  -webkit-box-align: end;
+     -ms-flex-align: end;
+        align-items: flex-end;
+  width: var(--content-width);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.logo {
+  width: 25%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: auto;
+    max-width: 200px;
+  }
+}
+
+.company-strapline {
+  margin-left: 0.5rem;
+  color: var(--text-color-black);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 360px) {
+  .company-strapline {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .company-strapline {
+    margin-left: 0rem;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
+.phone-contact {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .phone-contact {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.phone-number-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; 
+  -webkit-box-align: center; 
+     -ms-flex-align: center; 
+        align-items: center;
+}
+
+.phone-symbol {
+  width: 2.2rem;
+  height: auto;
+}
+
+.phone-number {
+  font-size: 1.3rem;
+}
+
+.opening-hours {
+  font-size: 0.8rem;
+}
+
+
+
+
+/*---------------------------------------------
+  $NAVIGATION
+----------------------------------------------*/
+
+.navigation {
+  width: 100%;
+  background: var(--color-navy);
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: #fff;
+    border-bottom: solid 5rem var(--color-navy);
+  }
+}
+
+.navigation-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+     -ms-flex-pack: start;
+   justify-content: flex-start;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .navigation-links {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.navigation-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .navigation-link {
+    color: var(--color-navy);
+    font-size: 2rem;
+  }
+}
+
+.divider {
+  height: 1rem;
+  border-left: solid 1px #fff;
+  border-right: 1px solid #8fa1ad;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .divider {
+    height: 2rem;
+    border-left: solid 1px var(--color-navy);
+    border-right: 1px solid #8fa1ad;
+  }
+}
+
+
+
+
+
+/*---------------------------------------------
+  $MAIN CONTENT
+----------------------------------------------*/
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+}
+
+.highlight-green {
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.highlight-regular {
+  font-weight: 700;
+}
+
+hr {
+  border: 2rem solid var(--color-navy);
+  width: 100%;
+}
+
+
+
+
+
+/*---------------------------------------------
+  $FOOTER
+----------------------------------------------*/
+
+.main-footer {
+  background: var(--color-navy);
+  height: 20rem;
+  width: 100%;
+}
+
+
+
+
+
+/*---------------------------------------------
+  $HOME - OFFER
+----------------------------------------------*/
+
+.offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-color-black);
+}
+
+@media (min-width: 768px) {
+  .offer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+     justify-content: space-between;
+    width: var(--content-width);
+    margin-bottom: 0rem;
+  }
+}
+
+.offer-text {
+  width: var(--content-width);
+}
+
+@media (min-width: 768px) {
+  .offer-image {
+    width: 55%;
+  }
+}
+
+.offer h2 {
+  font-weight: 400;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.offer ul {
+  list-style: none;
+}
+
+.offer li:before {
+  content: '✔';   
+  margin-right: 0.3em;
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.offer-image {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .offer-image {
+    -webkit-box-ordinal-group: 2;
+               -ms-flex-order: 1;
+                        order: 1;
+    width: 55%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+/*---------------------------------------------
+  $HOME - SHOWREAL
+----------------------------------------------*/
+
+
+.showreal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color-black);
+}
+
+@media (min-width: 768px) {
+  .showreal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+     justify-content: space-between;
+    -webkit-box-align: start;
+       -ms-flex-align: start;
+          align-items: flex-start;
+    width: var(--content-width);
+    margin-bottom: 2rem;
+  }
+}
+
+.reviews-container {
+  width: var(--content-width);
+}
+
+@media (min-width: 768px) {
+  .reviews-container {
+    width: 58%;
+  }
+}
+
+.showreal-header {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px var(--color-green);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.review-header {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  font-style: italic;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .slider-container {
+    width: 38%;
+  }
+}
+
+@media (max-width:767px) {
+  .slider-header {
+    width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.slider {
+  width: 100%;
+  height: auto;
+}
