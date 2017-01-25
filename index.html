@@ -5,7 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Buitenbos</title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css'>
+  <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   <link rel="stylesheet" href="public/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -38,14 +39,22 @@
   **********************************************-->
   <nav class="navigation">
     
-    <div class="navigation-links">
-      <a href="#" class="navigation-link">Home</a>
-      <div class="divider"></div>
-      <a href="#" class="navigation-link">Prijzen</a>
-      <div class="divider"></div>
-      <a href="#" class="navigation-link">Contact</a>
-    </div>
+    <div class="navigation-container">
+      <div class="navigation-links">
+        <a href="#" class="navigation-link">Home</a>
+        <div class="divider"></div>
+        <a href="#" class="navigation-link">Prijzen</a>
+        <div class="divider"></div>
+        <a href="#" class="navigation-link">Contact</a>
+      </div>
+
+      <div class="call-button">
+        <i class="fa fa-phone"></i>
+        <span class="call-text">Bel</span>
+      </div>
       
+    </div>
+    
   </nav><!-- END OF NAVIGATION -->
 
 
@@ -122,6 +131,37 @@
     $FOOTER
   **********************************************-->
   <footer class="main-footer">
+    
+    <div class="main-footer-container">
+    
+      <section class="about">
+        <p class="footer-title">Autoramen tinten of blinderen</p>
+        <p class="about-para">De autoramen tinten of blinderen? We brengen folie aan de binnenzijde van het raam aan, waardoor er een mooie geblindeerde uitstraling ontstaat. De folie is verkrijgbaar in verschillende uitvoeringen, afhankelijk van de mate van lichtdoorlatendheid. Uiteraard kunnen we u voorlichten over de regelgeving omtrent het blinderen van de autoramen, zodat u netjes binnen de kaders van de wet blijft. Verder lezen…</p>
+      </section>
+
+      <figure class="workshop">
+        <figcaption class="workshop-title footer-title">Bezoek onze werkplaats</figcaption>
+        <img class="workshop-image" src="https://raw.githubusercontent.com/PiotrBerebecki/car-services-website/master/public/assets/images/overig-desktop/autoramen-tinten-blinderen13.png" alt="werkplaats buite">
+      </figure>
+
+      <section class="social-container">
+        <p class="social-title footer-title">Volg ons op social media</p>
+        <div class="social-buttons-container">
+          <a href="#" class="social-button twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="social-button facebook">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="social-button instagram">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+      <p class="copyright">&copy;2016 Buitenbos Customs</p>
+      
+    </div>
     
   </footer><!-- END OF MAIN FOOTER -->
 
