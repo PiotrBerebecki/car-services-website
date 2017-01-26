@@ -82,13 +82,6 @@ body {
   padding-bottom: 1.2rem;
 }
 
-@media (min-width: 768px) {
-  .main-header {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-}
-
 .logo {
   width: 25%;
   height: auto;
@@ -394,6 +387,18 @@ button stuck in hover state */
   }
 }
 
+.about-para-list {
+    display: none;
+}
+
+@media (min-width: 768px) {
+  .about-para-list {
+    display: block;
+    margin-top: 0.5rem;
+    list-style: none;
+  }
+}
+
 .footer-title {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -550,7 +555,7 @@ button stuck in hover state */
   .offer-image-desktop {
     display: block;
     order: 1;
-    width: 30%;
+    width: 38%;
     height: 100%;
   }
 }
@@ -561,7 +566,7 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .offer-text {
-    width: 70%;
+    width: 62%;
   }
 }
 
@@ -657,13 +662,13 @@ button stuck in hover state */
     align-content: space-between;
     justify-content: space-between;
     width: var(--content-width);
-    height: 29rem;
+    height: 28rem;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .showreal {
-    height: 28rem;
+    height: 27rem;
   }
 }
 
@@ -675,7 +680,7 @@ button stuck in hover state */
   .reviews-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 60%;
     height: 78%;
   }
@@ -684,6 +689,7 @@ button stuck in hover state */
 .showreal-header {
   width: 100%;
   margin-top: 2rem;
+  margin-bottom: 1.2rem;
   padding-bottom: 0.5rem;
   border-bottom: solid 1px var(--color-accent);
   font-size: 1.4rem;
@@ -692,8 +698,11 @@ button stuck in hover state */
 
 .review-header {
   font-weight: 600;
-  margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.review:nth-child(n+3) .review-header {
+  margin-top: 1rem;
 }
 
 .review-text {
@@ -721,7 +730,7 @@ button stuck in hover state */
 @media (min-width:768px) {
   .slider-header {
     width: 100%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.8rem;
     margin-left: 0;
     margin-right: 0;
   }
