@@ -139,11 +139,23 @@ body {
   display: flex;
   justify-content: space-around; 
   align-items: center;
+  margin-bottom: 0.15rem;
 }
 
 .phone-symbol {
-  width: 2.2rem;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 50%;
+}
+
+.phone-symbol .fa-phone {
+  font-size: 1.7rem;
+  transform: translateY(5%);
 }
 
 .phone-number {
@@ -153,6 +165,7 @@ body {
 .opening-hours {
   font-size: 0.8rem;
 }
+
 
 
 
@@ -299,7 +312,7 @@ body {
   margin-right: auto;
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
-  border-radius: 3px;
+  border-radius: 5px;
   background: var(--color-accent);
   color: #fff;
   font-size: 1.7rem;
@@ -322,9 +335,13 @@ body {
   }
 }
 
-.button-accent:hover {
-  background: #2ec93b;
-  transition: background 100ms ease-in-out;
+/* No hover for touch devices to avoid 
+button stuck in hover state */
+@media (min-width: 769px) {
+  .button-accent:hover {
+    background: #2ec93b;
+    transition: background 100ms ease-in-out;
+  }
 }
 
 .button-accent:active {
@@ -346,6 +363,7 @@ body {
   padding-bottom: 1rem;
   background: var(--color-background);
   color: #fff;
+  font-weight: 300;
 }
 
 .main-footer-container {
@@ -405,7 +423,6 @@ body {
     width: 100%;
   }
 }
-
 
 .workshop-image {
   width: 100%;
@@ -661,15 +678,6 @@ button stuck in hover state */
     justify-content: space-between;
     width: 60%;
     height: 78%;
-  }
-}
-
-@media (min-width: 768px) {
-  .reviews-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: solid 1px tomato;
   }
 }
 
