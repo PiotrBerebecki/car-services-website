@@ -1,0 +1,30 @@
+{
+  "name": "car-services-website",
+  "version": "1.0.0",
+  "description": "Live version: https://piotrberebecki.github.io/car-services-website/",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PiotrBerebecki/car-services-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PiotrBerebecki/car-services-website/issues"
+  },
+  "homepage": "https://github.com/PiotrBerebecki/car-services-website#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
