@@ -1,3 +1,18 @@
+/* Developemnt styles - delete for production */ 
+
+main, .about {
+/*   display: none!important; */
+}
+
+.border {
+  border: solid 1px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------------------ */ 
+
+
+
+
 /*----------------------------------------------
   [TABLE OF CONTENTS]
 
@@ -65,6 +80,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+textarea {
+  resize: none;
+}
+
 
 
 
@@ -82,8 +101,19 @@ body {
   padding-bottom: 1.2rem;
 }
 
-.logo {
+.logo-link {
   width: 25%;
+}
+
+@media (min-width: 768px) {
+  .logo-link {
+    width: auto;
+  }
+}
+
+.logo {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
@@ -283,6 +313,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding-top: 1rem;
 }
 
 .highlight-accent {
@@ -299,12 +331,13 @@ body {
 .button-accent {
   display: block;
   width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
+  border: none;
   border-radius: 5px;
   background: var(--color-accent);
   color: #fff;
@@ -313,6 +346,7 @@ body {
   text-align: center;
   text-decoration: none;
   user-select: none;
+  cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -322,8 +356,8 @@ body {
     width: 300px;
     max-width: 75%;
     margin-left: 1.3rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-size: 1.3rem;
   }
 }
@@ -340,6 +374,46 @@ button stuck in hover state */
 .button-accent:active {
   background: #1a9924;
   transition: background 0ms ease-in-out;
+}
+
+
+
+
+
+/*---------------------------------------------
+  $MAIN CONTENT - SUPPLIERS
+----------------------------------------------*/
+
+
+.suppliers {
+  width: 100%;
+  background: var(--color-background);
+}
+
+.suppliers-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .suppliers-container {
+    width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.logo-supplier {
+  max-width: 22%;
+  max-height: 1.5rem;
+  height: auto;
+  filter: brightness(145%);
+  opacity: 0.8;
 }
 
 
@@ -532,7 +606,6 @@ button stuck in hover state */
     align-items: flex-end;
     justify-content: space-between;
     width: var(--content-width);
-    margin-top: 1rem;
   }
 }
 
@@ -607,44 +680,6 @@ button stuck in hover state */
 
 
 /*---------------------------------------------
-  $HOME - SUPPLIERS
-----------------------------------------------*/
-
-
-.suppliers {
-  width: 100%;
-  background: var(--color-background);
-}
-
-.suppliers-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-top: 0.9rem;
-  margin-bottom: 0.9rem;
-}
-
-@media (min-width: 768px) {
-  .suppliers-container {
-    width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.logo-supplier {
-  height: 1.5rem;
-  filter: brightness(145%);
-  opacity: 0.8;
-}
-
-
-
-
-
-/*---------------------------------------------
   $HOME - SHOWREAL
 ----------------------------------------------*/
 
@@ -662,6 +697,12 @@ button stuck in hover state */
     align-content: space-between;
     justify-content: space-between;
     width: var(--content-width);
+    height: 29rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .showreal {
     height: 28rem;
   }
 }
@@ -669,6 +710,12 @@ button stuck in hover state */
 @media (min-width: 1200px) {
   .showreal {
     height: 27rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .showreal {
+    height: 26rem;
   }
 }
 
@@ -682,7 +729,7 @@ button stuck in hover state */
     flex-direction: column;
     justify-content: flex-start;
     width: 60%;
-    height: 78%;
+    /*height: 78%;*/
   }
 }
 
@@ -744,8 +791,6 @@ button stuck in hover state */
 
 .showreal .button-accent {
   width: var(--content-width);
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -754,4 +799,165 @@ button stuck in hover state */
     margin-top: auto;
     margin-bottom: auto;
   }
+}
+
+
+
+
+
+/*---------------------------------------------
+  $CONTACT - CONTACT FORM
+----------------------------------------------*/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color-black);
+}
+
+@media (min-width: 768px) {
+  .contact {
+    width: var(--content-width);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.contact-container {
+  width: var(--content-width);
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    width: 60%;
+  }
+}
+
+.contact-info,
+.phone-info {
+  margin-bottom: 1rem;
+}
+
+.contact-info-header,
+.phone-info-header,
+.contact-review-header {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.phone-info-header {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.phone-info {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .phone-info {
+    display: block;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+.contact-form-column-one,
+.contact-form-column-two {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contact-form-column-one {
+    width: 35%;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-form-column-two {
+    width: 60%;
+  }
+}
+
+.contact-form-input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f2f2f2;
+  color: var(--text-color-black);
+  font-family: Arial;
+  font-size: 1rem;
+  border-style: inset;
+  border-width: 2px;
+  border-color: #e6e6e6;
+}
+
+input.contact-form-input {
+  height: 3rem
+}
+
+@media (min-width: 768px) {
+  input.contact-form-input {
+    height: 3.2rem;
+  }
+}
+
+textarea.contact-form-input {
+  height: 8rem;
+  font-family: Arial;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  textarea.contact-form-input {
+    height: 10.6rem
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-form .button-accent {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: auto;
+    height: 3.2rem;
+    padding: 0rem 1.5rem;
+  }
+}
+
+.contact-review-container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .contact-review-container {
+    display: block;
+    width: 34%;
+  }
+}
+
+.contact-review-header {
+  /*width: 100%;*/
+  /*margin-top: 2rem;*/
+  /*margin-bottom: 1.2rem;*/
+  /*padding-bottom: 0.5rem;*/
+  /*border-bottom: solid 1px var(--color-accent);*/
+  font-size: 1.4rem;
+}
+
+.contact-review-text {
+  margin-bottom: 0.8rem;
 }

@@ -1,6 +1,6 @@
 # Car Services Website
 
-Live version: https://car-services-website.herokuapp.com/
+Live version: https://piotrberebecki.github.io/car-services-website/
 
 ## Getting started
 

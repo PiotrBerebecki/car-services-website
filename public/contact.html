@@ -7,7 +7,7 @@
   <title>Buitenbos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./public/assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -19,7 +19,7 @@
   <header class="main-header">
     
     <a class="logo-link" href="/">
-      <img class="logo" src="./public/assets/images/overig-desktop/logo.png" alt="logo buitenbos">
+      <img class="logo" src="./assets/images/overig-desktop/logo.png" alt="logo buitenbos">
     </a>
     
     <h1 class="company-strapline">Dé autoramen tinter</h1>
@@ -45,9 +45,9 @@
       <div class="navigation-links">
         <a href="/" class="navigation-link">Home</a>
         <div class="divider"></div>
-        <a href="public/prijzen.html" class="navigation-link">Prijzen</a>
+        <a href="prijzen.html" class="navigation-link">Prijzen</a>
         <div class="divider"></div>
-        <a href="public/contact.html" class="navigation-link">Contact</a>
+        <a href="contact.html" class="navigation-link">Contact</a>
       </div>
 
       <div class="call-button">
@@ -66,64 +66,55 @@
   **********************************************-->
   <main class="main-content">
 
-    <section class="offer">
-      <img class="offer-image-desktop" src="./public/assets/images/overig-desktop/autoramen-tinten-blinderen1.png" alt="car photo">
-      <img class="offer-image-mobile" src="./public/assets/images/overig-mobiel/autoramen-tinten-blinderen-14-01.png" alt="car photo">
-      <div class="offer-text">
-        <h2 class="offer-title">Het beste tintbedrijf voor uw autoramen!</h2>
-        <ul>
-          <li>Levenslange garantie, alleen bij ons!</li>
-          <li>De goedkoopste uit de regio, al vanaf <span class="highlight-accent">&euro; 169,-</span></li>
-          <li>Klaar terwijl u wacht. (of een <span class="highlight-regular">gratis</span> leenauto)</li>
-        </ul>
+    <section class="contact">
+      
+      <div class="contact-container">
+    
+        <div class="contact-text">
+          <div class="contact-info">
+            <h2 class="contact-info-header">Contact</h2>
+            <p>Via dit contact formulier kunt u een vraag stellen aan Buitenbos Customs. U krijgt dan binnen 1 werkdag een reactie op uw bericht.</p>
+          </div>
+          <div class="phone-info">
+            <header class="phone-info-header">Liever bellen?</header>
+            <p>We zijn ieder werkdag bereikbaar van 08.00 tot 17.00 uur 071- 2600 323</p>
+          </div>
+        </div>
         
-        <a href="#" class="button-accent">Kies uw pakket</a>
-        
+        <form class="contact-form">
+          
+          <div class="contact-form-column-one">
+            <input class="contact-form-input" type="text" placeholder="* Naam">
+            <input class="contact-form-input" type="text" placeholder="* Email">
+            <input class="contact-form-input" type="text" placeholder="* Tel. nummer">
+            <input class="contact-form-input" type="text" placeholder="* Gewenste datum">
+          </div>
+          <div class="contact-form-column-two">
+            <textarea class="contact-form-input" placeholder="* Bericht"></textarea>
+            <input type="submit" class="button-accent" value="Verzand">
+          </div>
+        </form>
+      
       </div>
-    </section><!-- END OF OFFER -->
+      
+      <div class="contact-review-container">
+        <header class="contact-review-header">Klant recentie’s</header>
+        <p class="contact-review-text">“Dit is een faketekst. Alles wat hier staat is slechts om een indruk te geven van het grafische effect van tekst op deze plek. Wat u hier leest is een voorbeeldtekst. Deze wordt later vervangen door de uiteindelijke tekst, die nu nog niet bekend is”</p>
+        <p class="contact-review-text">“Dit is een faketekst. Alles wat hier staat is slechts om een indruk te geven van het grafische effect van tekst op deze plek. Wat u hier leest is een voorbeeldtekst. Deze wordt later vervangen door de uiteindelijke tekst, die nu nog niet bekend is”</p>
+      </div>
+      
+    </section><!-- END OF CONTACT -->
     
     
     <section class="suppliers">
       <div class="suppliers-container">
-        <img class="logo-supplier" src="./public/assets/images/logos/suntek.png" alt="logo suntek">
-        <img class="logo-supplier" src="./public/assets/images/logos/3m.png" alt="logo 3m">
-        <img class="logo-supplier" src="./public/assets/images/logos/hexis.png" alt="logo hexis">
-        <img class="logo-supplier" src="./public/assets/images/logos/avery-dennison.png" alt="logo avery dennison">
+        <img class="logo-supplier" src="./assets/images/logos/suntek.png" alt="logo suntek">
+        <img class="logo-supplier" src="./assets/images/logos/3m.png" alt="logo 3m">
+        <img class="logo-supplier" src="./assets/images/logos/hexis.png" alt="logo hexis">
+        <img class="logo-supplier" src="./assets/images/logos/avery-dennison.png" alt="logo avery dennison">
       </div>
     </section><!-- END OF SUPPLIERS -->
     
-    
-    <section class="showreal">
-      
-      <div class="reviews-container">
-        
-        <header class="showreal-header reviews-header">Klant recentie’s</header>
-
-        <div class="review">
-          <header class="review-header">Frans Weinbeck uit Rijswijk:</header>
-          <p class="review-text">“Ik heb nu van 3 auto’s de ruiten laten tinten en ik ben daar zeer tevreden over. 
-            Het is perfect gedaan en het was snel klaar. Ik voel me een tevreden klant bij Buitenbos 
-            Customs en daarom kan ik dit bedrijf aan iedereen aanraden!”</p>
-        </div>
-        
-        <div class="review">
-          <header class="review-header">Fahad ibn Mansour uit Zoetermeer:</header>
-          <p class="review-text">“Ramen laten tinten: achterruit, twee zijruiten voor en achter. Tinten is erg goed en snel 
-            gedaan. Er is goed op maat gesneden en kwalitatieve folie gebruikt i.p.v. goedkoop spul. 
-            Met name de afwerking is erg goed, het lijkt nu fabriek-af”</p>
-        </div>  
-        
-      </div>
-      
-      <figure class="slider-container">
-        <figcaption class="showreal-header slider-header">Recent getint auto’s</figcaption>
-        <img class="slider" src="./public/assets/images/slider-desktop/autoramen-tinten blinderen2.png" alt="photo recent getint auto">
-      </figure>
-      
-      <a href="#" class="button-accent">Kies uw pakket</a>
-      
-    </section><!-- END OF SHOWREAL -->
-
   </main><!-- END OF MAIN CONTENT -->
 
 
@@ -148,7 +139,7 @@
 
       <figure class="workshop">
         <figcaption class="workshop-title footer-title">Bezoek onze werkplaats</figcaption>
-        <img class="workshop-image" src="./public/assets/images/overig-desktop/autoramen-tinten-blinderen13-crop.png" alt="werkplaats buite">
+        <img class="workshop-image" src="./assets/images/overig-desktop/autoramen-tinten-blinderen13-crop.png" alt="werkplaats buite">
       </figure>
 
       <section class="social-container">
@@ -172,7 +163,7 @@
     
   </footer><!-- END OF MAIN FOOTER -->
 
-  <script src="./public/assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
   
 </body>
 
