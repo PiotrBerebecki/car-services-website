@@ -437,6 +437,7 @@ button stuck in hover state */
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
 }
@@ -447,75 +448,59 @@ button stuck in hover state */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    width: var(--content-width);
   }
 }
 
-.about {
-  width: var(--content-width);
-}
-
-@media (min-width: 768px) {
-  .about {
-    width: 60%;
-  }
-}
-
-.about-para-list {
-    display: none;
-}
-
-@media (min-width: 768px) {
-  .about-para-list {
-    display: block;
-    margin-top: 0.5rem;
-    list-style: none;
-  }
-}
-
-.footer-title {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.workshop {
+.footer-contact {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
+  border: solid 3px green;
 }
 
 @media (min-width: 768px) {
-  .workshop {
-    width: 34%;
+  .footer-contact {
+    
   }
 }
 
-.workshop-title {
-  width: var(--content-width);
+.footer-address-container {
+  width: 47%;
+  border: solid 1px tomato;
 }
 
 @media (min-width: 768px) {
-  .workshop-title {
-    width: 100%;
+  .footer-address-container {
+    width: 30%;
   }
 }
 
-.workshop-image {
+.footer-opening-hours-container {
+  width: 47%;
+  border: solid 1px red;
+}
+
+@media (min-width: 768px) {
+  .footer-opening-hours-container {
+    order: 1;
+    width: 30%;
+  }
+}
+
+.footer-map-container {
   width: 100%;
-  height: auto;
+  border: solid 1px tomato;
+}
+
+@media (min-width: 768px) {
+  .footer-map-container {
+    width: 30%;
+  }
 }
 
 .social-container {
-  width: var(--content-width);
-}
-
-@media (min-width: 768px) {
-  .social-container {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -805,6 +790,62 @@ button stuck in hover state */
 
 
 
+
+/*---------------------------------------------
+  $HOME FOOTER
+----------------------------------------------*/
+
+@media (min-width: 768px) {
+  .about {
+    width: 60%;
+  }
+}
+
+.about-para-list {
+    display: none;
+}
+
+@media (min-width: 768px) {
+  .about-para-list {
+    display: block;
+    margin-top: 0.5rem;
+    list-style: none;
+  }
+}
+
+.footer-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.workshop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .workshop {
+    width: 34%;
+  }
+}
+
+.workshop-title {
+  width: 100%;
+}
+
+.workshop-image {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
 /*---------------------------------------------
   $CONTACT - CONTACT FORM
 ----------------------------------------------*/
@@ -875,7 +916,6 @@ button stuck in hover state */
   }
 }
 
-
 .contact-form-column-one,
 .contact-form-column-two {
   display: flex;
@@ -907,7 +947,7 @@ button stuck in hover state */
 }
 
 input.contact-form-input {
-  height: 3rem
+  height: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -950,11 +990,6 @@ textarea.contact-form-input {
 }
 
 .contact-review-header {
-  /*width: 100%;*/
-  /*margin-top: 2rem;*/
-  /*margin-bottom: 1.2rem;*/
-  /*padding-bottom: 0.5rem;*/
-  /*border-bottom: solid 1px var(--color-accent);*/
   font-size: 1.4rem;
 }
 
