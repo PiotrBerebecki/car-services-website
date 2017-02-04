@@ -934,7 +934,7 @@ button stuck in hover state */
 
 
 /*---------------------------------------------
-  $CONTACT - CONTACT FORM
+  $CONTACT, $OFFERTE - CONTACT FORM
 ----------------------------------------------*/
 
 .contact {
@@ -960,6 +960,13 @@ button stuck in hover state */
 @media (min-width: 768px) {
   .contact-container {
     width: 68%;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-container.offer {
+    flex-wrap: wrap;
+    width: 72%;
   }
 }
 
@@ -1000,6 +1007,13 @@ button stuck in hover state */
   .contact-form {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-form.offer {
+    align-items: flex-start;
+    width: 100%;
   }
 }
 
