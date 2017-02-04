@@ -533,6 +533,12 @@ button stuck in hover state */
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  .footer-contact-header {
+    font-size: 1.2rem;
+  }
+}
+
 .footer-address-container p:nth-child(3) {
   margin-bottom: 1rem;
 }
@@ -567,6 +573,12 @@ button stuck in hover state */
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  .footer-opening-hours-table th {
+    font-size: 1.2rem;
+  }
+}
+
 .day-name {
   padding-right: 0.5rem;
 }
@@ -580,12 +592,6 @@ button stuck in hover state */
     display: inline-block;
   }
 }
-
-
-
-
-
-
 
 .social-container {
   width: 100%;
