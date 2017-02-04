@@ -941,7 +941,8 @@ button stuck in hover state */
 
 
 /*---------------------------------------------
-  $CONTACT, $OFFERTE - CONTACT FORM, $BEDANKT
+  $CONTACT, $OFFERTE, $AFSPRAAK - CONTACT FORM
+  $BEDANKT
 ----------------------------------------------*/
 
 .contact {
@@ -1000,6 +1001,10 @@ button stuck in hover state */
 .contact-review-header {
   margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+.appointment-pack-offer {
+  margin-top: 0.6rem;
 }
 
 .standalone-info {
