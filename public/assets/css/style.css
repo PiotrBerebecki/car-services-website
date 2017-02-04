@@ -45,7 +45,13 @@ main, .about {
 
 @media (min-width: 1200px) {
   :root {
-    --content-width: 65%;
+    --content-width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --content-width: 70%;
   }
 }
 
@@ -154,13 +160,14 @@ textarea {
 @media (min-width: 768px) {
   .phone-contact {
     display: block;
+    width: 28%;
     margin-left: auto;
   }
 }
 
 .phone-number-row {
   display: flex;
-  justify-content: space-around; 
+  justify-content: flex-start; 
   align-items: center;
   margin-bottom: 0.15rem;
 }
@@ -171,6 +178,7 @@ textarea {
   align-items: center;
   width: 2.4rem;
   height: 2.4rem;
+  margin-right: 1rem;
   background: var(--color-accent);
   color: #fff;
   border-radius: 50%;
@@ -186,7 +194,13 @@ textarea {
 }
 
 .opening-hours {
-  font-size: 0.8rem;
+  font-size: 0.75em;
+}
+
+@media (min-width: 992px) {
+  .opening-hours {
+    font-size: 1rem;
+  }
 }
 
 
@@ -464,7 +478,7 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .footer-address-container {
-    width: 27%;
+    width: 28%;
   }
 }
 
@@ -475,7 +489,7 @@ button stuck in hover state */
 @media (min-width: 768px) {
   .footer-opening-hours-container {
     order: 1;
-    width: 27%;
+    width: 28%;
   }
 }
 
@@ -520,10 +534,17 @@ button stuck in hover state */
 }
 
 .footer-opening-hours-table {
-  margin-right: auto;
+  margin-left: auto;
   padding: 0;
   border-spacing: 0;
   border-collapse: separate;
+}
+
+@media (min-width: 768px) {
+  .footer-opening-hours-table {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 .footer-opening-hours-table th {
@@ -925,7 +946,7 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .contact-container {
-    width: 70%;
+    width: 68%;
   }
 }
 
@@ -1045,7 +1066,7 @@ textarea.contact-form-input {
 @media (min-width: 768px) {
   .contact-review-container {
     display: block;
-    width: 27%;
+    width: 28%;
   }
 }
 
