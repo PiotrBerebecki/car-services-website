@@ -365,6 +365,7 @@ textarea {
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
   border: none;
+  outline: none;
   border-radius: 5px;
   background: var(--color-accent);
   color: #fff;
@@ -964,7 +965,7 @@ button stuck in hover state */
 }
 
 @media (min-width: 768px) {
-  .contact-container.offer {
+  .contact-container.offerte {
     flex-wrap: wrap;
     width: 72%;
   }
@@ -1001,19 +1002,14 @@ button stuck in hover state */
 .contact-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .contact-form {
     flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 768px) {
-  .contact-form.offer {
     align-items: flex-start;
-    width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -1021,6 +1017,7 @@ button stuck in hover state */
 .contact-form-column-two {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
