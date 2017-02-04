@@ -464,7 +464,7 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .footer-address-container {
-    width: 30%;
+    width: 27%;
   }
 }
 
@@ -475,7 +475,7 @@ button stuck in hover state */
 @media (min-width: 768px) {
   .footer-opening-hours-container {
     order: 1;
-    width: 30%;
+    width: 27%;
   }
 }
 
@@ -489,6 +489,8 @@ button stuck in hover state */
   .footer-map-container {
     width: 30%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -518,7 +520,7 @@ button stuck in hover state */
 }
 
 .footer-opening-hours-table {
-  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   border-spacing: 0;
   border-collapse: separate;
@@ -923,7 +925,7 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .contact-container {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -997,13 +999,20 @@ button stuck in hover state */
   border-color: #e6e6e6;
 }
 
+@media (min-width: 768px) {
+  .contact-form-input {
+    margin-top: 1rem;
+    background: #fff;
+  }
+}
+
 input.contact-form-input {
   height: 3rem;
 }
 
 @media (min-width: 768px) {
   input.contact-form-input {
-    height: 3.2rem;
+    height: 2.7rem;
   }
 }
 
@@ -1015,16 +1024,16 @@ textarea.contact-form-input {
 
 @media (min-width: 768px) {
   textarea.contact-form-input {
-    height: 10.6rem
+    height: 10.1rem
   }
 }
 
 @media (min-width: 768px) {
   .contact-form .button-accent {
     margin-left: 0;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     width: auto;
-    height: 3.2rem;
+    height: 2.7rem;
     padding: 0rem 1.5rem;
   }
 }
@@ -1036,7 +1045,7 @@ textarea.contact-form-input {
 @media (min-width: 768px) {
   .contact-review-container {
     display: block;
-    width: 34%;
+    width: 27%;
   }
 }
 
