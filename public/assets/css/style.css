@@ -745,17 +745,16 @@ button stuck in hover state */
   list-style: none;
 }
 
-.offer li:before {
-  content: '✓';
+.offer .fa-check {
   margin-right: 0.3rem;
   color: var(--color-accent);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 800;
 }
 
 @media (min-width: 768px) {
   .offer li {
-    font-size: 1.32rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -1155,22 +1154,158 @@ textarea.contact-form-input {
   flex-direction: column;
   align-items: center;
   width: var(--content-width);
+  padding-bottom: 1rem;
   color: var(--text-color-black);
+  /* border: solid 2px blue; */
 }
 
 @media (min-width: 768px) {
   .packages {
-    width: var(--content-width);
+    /*width: var(--content-width);*/
+    width: 600px;
+    
+  }
+}
+
+.prijzen-header {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .prijzen-header {
+    font-size: 1.4rem;;
   }
 }
 
 .packages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /*border: solid 2px tomato;*/
+}
+
+.package-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.package-single:nth-child(odd) {
+  background: #f2f2f2;
+  border: solid 2px #e6e6e6;
+}
+
+.package-single:first-child {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.package-single:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.package-single:nth-child(2) {
+  width: 103%;
+  background: var(--color-background);
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.package-single-number {
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  .packages-container {
-    /*width: 100%;*/
+  .package-single-number {
+    width: 500px;
+  }
+}
+
+.package-single-cars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /*border: solid 8px #cfcfcf;*/
+}
+
+@media (min-width: 768px) {
+  .package-single-cars {
+    width: 500px;
+    font-size: 1.1rem;
+  }
+}
+
+.auto-back {
+  max-width: 30.5%;
+  max-height: 6rem;
+  height: auto;
+}
+
+.auto-side {
+  max-width: 61.2%;
+  max-height: 6rem;
+  height: auto;
+  /*border: solid 2px black;*/
+}
+
+.package-single:nth-child(3) .auto-back {
+  max-width: 29.5%;
+}
+
+.package-single:nth-child(3) .auto-side {
+  max-width: 67.8%;
+}
+
+.package-single-table {
+  width: 100%;
+  margin: 1rem auto;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .package-single-table {
+    width: 500px;
+    font-size: 1.1rem;
+  }
+}
+
+.package-single-table td {
+  width: 50%;
+}
+
+.package-single-table .fa-check {
+  margin-right: 0.3rem;
+  color: var(--color-accent);
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .package-single-table .fa-check {
+    font-size: 1.6rem;
+  }
+}
+
+.button-accent.package {
+  margin: 0;
+  width: 100%;
+  padding-top: 0.3rem;
+  padding-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .button-accent.package {
+    width: 500px;
   }
 }
 
@@ -1246,7 +1381,25 @@ textarea.contact-form-input {
   margin-bottom: 0.5rem;
 }
 
-.zicht-percentages-image {
-  width: 100%;
+.zicht-percentages-image-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .zicht-percentages-image-desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.zicht-percentages-image-mobile {
+  display: 100%;
   height: auto;
+}
+
+@media (min-width: 768px) {
+  .zicht-percentages-image-mobile {
+    display: none;
+  }
 }
