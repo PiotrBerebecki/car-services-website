@@ -26,6 +26,8 @@ main, .about {
 
   [SITE-SPECIFIC STYLES]
     HOME
+    CONTACT, OFFERTE, AFSPRAAK, BEDANKT
+    PRIJZEN
 ----------------------------------------------*/
 
 
@@ -344,15 +346,17 @@ textarea {
   padding-top: 1rem;
 }
 
-.highlight-accent {
+.text-accent {
   color: var(--color-accent);
-  font-weight: 700;
-  white-space: nowrap;
 }
 
-.highlight-regular {
+.text-accent-strong {
+  color: var(--color-accent);
   font-weight: 700;
-  white-space: nowrap;
+}
+
+.text-regular-strong {
+  font-weight: 700;
 }
 
 .button-accent {
@@ -370,7 +374,7 @@ textarea {
   background: var(--color-accent);
   color: #fff;
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -531,7 +535,7 @@ button stuck in hover state */
 
 .footer-contact-header {
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -571,7 +575,7 @@ button stuck in hover state */
 .footer-opening-hours-table th {
   padding-bottom: 1rem;
   text-align: left;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -1136,4 +1140,113 @@ textarea.contact-form-input {
 
 .contact-review-text {
   margin-bottom: 0.8rem;
+}
+
+
+
+
+
+/*---------------------------------------------
+  $PRIJZEN
+----------------------------------------------*/
+
+.packages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--content-width);
+  color: var(--text-color-black);
+}
+
+@media (min-width: 768px) {
+  .packages {
+    width: var(--content-width);
+  }
+}
+
+.packages-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .packages-container {
+    /*width: 100%;*/
+  }
+}
+
+.other-packages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  color: var(--text-color-black);
+}
+
+@media (min-width: 768px) {
+  .other-packages {
+    width: var(--content-width);
+  }
+}
+
+.other-packages-container {
+  width: var(--content-width);
+}
+
+@media (min-width: 768px) {
+  .other-packages-container {
+    width: 100%;
+  }
+}
+
+.other-packages-table {
+  margin-bottom: 1.5rem;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.other-packages-table th {
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.other-packages-table tr {
+  height: 2rem;
+}
+
+.other-package-type {
+  padding-right: 1rem;
+}
+
+.button-accent.inside-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 2rem;
+  padding: 0 0.3rem;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 400px) {
+  .button-accent.inside-table {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+}
+
+.other-packages-title-question {
+  margin-bottom: 0.5rem;
+}
+
+.other-packages-paragraph {
+  margin-bottom: 0.5rem;
+}
+
+.zicht-percentages-image {
+  width: 100%;
+  height: auto;
 }
