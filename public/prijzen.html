@@ -68,8 +68,11 @@
     <main class="main-content">
 
       <section class="packages">
-      
-        <h2 class="prijzen-header">Kies hier de pakket die bij uw auto</h2>
+        
+        <div class="packages-header-container">
+          <span class="packages-header-guide">Kies hier de pakket die bij uw auto</span>
+          <span class="packages-header-description">Omschrijving</span>
+        </div>
         
         <div class="packages-container">
           
@@ -81,33 +84,61 @@
               <img class="auto-back" src="./assets/images/overig-desktop/pakket-1-2-desktop.png" alt="autoramen tinten pakket back">
               <img class="auto-side" src="./assets/images/overig-desktop/pakket-1-desktop.png" alt="autoramen tinten pakket back">
             </div>
-          
-            <table class="package-single-table">
-              <tr><td colspan="2"><i class="fa fa-check"></i>1x achterruit</td></tr>
-              <tr><td><i class="fa fa-check"></i>2x zijruiten</td><td><i class="fa fa-check"></i><span class="text-crossed">€ 174</span>,- <span class="text-accent">€ 169,-</span></td></tr>
-            </table>
             
-            <a href="afspraak.html" class="button-accent package">Maak nu een afspraak</a>
-          
+            <div class="package-selling-container">
+              <div class="package-single-points">
+              
+                <div class="points-one">
+                  <p><i class="fa fa-check"></i>1x achterruit</p>
+                  <p><i class="fa fa-check"></i>2x zijruiten</p>
+                </div>
+                
+                <div class="points-two">
+                  <p><i class="fa fa-check"></i><span class="text-crossed">€ 174</span>,- <span class="text-accent">€ 169,-</span></p>
+                </div>
+                
+                <a href="afspraak.html" class="button-accent package">Maak nu een afspraak</a>
+                
+              </div>
+            </div>
+
           </div>
+          
           
           <div class="package-single">
           
             <p class="package-single-number text-accent">2</p>
+            
+            <img class="best-seller-label desktop" src="./assets/images/overig-desktop/meest-gekozen-desktop.png">
+            <img class="best-seller-label mobile" src="./assets/images/overig-desktop/meest-gekozen-mobile.png">
           
             <div class="package-single-cars">
               <img class="auto-back" src="./assets/images/overig-desktop/pakket-1-2-desktop.png" alt="autoramen tinten pakket back">
               <img class="auto-side" src="./assets/images/overig-desktop/pakket-2-desktop.png" alt="autoramen tinten pakket back">
             </div>
             
-            <table class="package-single-table">
-              <tr><td><i class="fa fa-check"></i>1x achterruit</td><td><i class="fa fa-check"></i>2x grote deurruit</td></tr>
-              <tr><td><i class="fa fa-check"></i>2x kleine deurruit</td><td><i class="fa fa-check"></i><span class="text-crossed">€ 255</span>,- <span class="text-accent">€ 239,-</span></td></tr>
-            </table>
+            <img class="arrow-left" src="./assets/images/overig-desktop/arrow.png">
             
-            <a href="afspraak.html" class="button-accent package">Maak nu een afspraak</a>
+            <div class="package-selling-container">
+              <div class="package-single-points">
+              
+                <div class="points-one">
+                  <p><i class="fa fa-check"></i>1x achterruit</p>
+                  <p><i class="fa fa-check"></i>2x kleine deurruit</p>
+                </div>
+                
+                <div class="points-two">
+                  <p><i class="fa fa-check"></i>2x grote deurruit</p>
+                  <p><i class="fa fa-check"></i><span class="text-crossed">€ 255</span>,- <span class="text-accent">€ 239,-</span></p>
+                </div>
+                
+                <a href="afspraak.html" class="button-accent package">Maak nu een afspraak</a>
+                
+              </div>
+            </div>
           
           </div>
+          
           
           <div class="package-single">
           
@@ -118,13 +149,24 @@
               <img class="auto-side" src="./assets/images/overig-desktop/pakket-3-desktop.png" alt="autoramen tinten pakket back">
             </div>
             
-            <table class="package-single-table">
-              <tr><td colspan="2"><i class="fa fa-check"></i>1x achterruit</td></tr>
-              <tr><td><i class="fa fa-check"></i>2x zijruiten</td><td><i class="fa fa-check"></i>2x grote deurruit</td></tr>
-              <tr><td><i class="fa fa-check"></i>2x kleine deurruit</td><td><i class="fa fa-check"></i><span class="text-crossed">€ 335</span>,- <span class="text-accent">€ 299,-</span></td></tr>
-            </table>
-            
-            <a href="afspraak.html" class="button-accent package">Maak nu een afspraak</a>
+            <div class="package-selling-container">
+              <div class="package-single-points">
+              
+                <div class="points-one">
+                  <p><i class="fa fa-check"></i>1x achterruit</p>
+                  <p><i class="fa fa-check"></i>2x zijruiten</p>
+                  <p><i class="fa fa-check"></i>2x kleine deurruit</p>
+                </div>
+                
+                <div class="points-two">
+                  <p><i class="fa fa-check"></i>2x grote deurruit</p>
+                  <p><i class="fa fa-check"></i><span class="text-crossed">€ 335</span>,- <span class="text-accent">€ 299,-</span></p>
+                </div>
+                
+                <a href="afspraak.html" class="button-accent package">Maak nu een afspraak</a>
+                
+              </div>
+            </div>
           
           </div>
           
@@ -154,9 +196,12 @@
             <tr><td class="other-package-type">Bedrijfswagen?</td><td><a href="offerte.html" class="button-accent inside-table">Offerte aanvragen</a></td></tr>
           </table>
           
-          <h3 class="other-packages-title-question">Wat is toegestaan?</h3>
-          <p class="other-packages-paragraph">De voorste deurruiten mogen getint worden, maar moet minimaal 75% licht door kunnen laten. Betreft de achterdeuren en achterruit zijn er geen eisen.</p>
-          <p class="other-packages-paragraph"><span class="text-accent">Met ons folie assortiment blijft u altijd binnen de wettelijke normen!</span></p>
+          <div class="other-packages-question">
+            <h3 class="other-packages-title-question">Wat is toegestaan?</h3>
+            <p class="other-packages-paragraph">De voorste deurruiten mogen getint worden, maar moet minimaal 75% licht door kunnen laten. Betreft de achterdeuren en achterruit zijn er geen eisen.</p>
+          </div>
+          
+          <p class="other-packages-message"><span class="text-accent">Met ons folie assortiment blijft u altijd binnen de wettelijke normen!</span></p>
           
         </div>
         
