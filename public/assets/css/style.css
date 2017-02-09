@@ -88,6 +88,18 @@ body {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.link-text {
+  color: #fff;
+}
+
+.link-text:hover {
+  cursor: pointer;
+}
+
+.link-text:active {
+  text-decoration: none;
+}
+
 textarea {
   resize: none;
 }
@@ -908,12 +920,12 @@ button stuck in hover state */
   }
 }
 
-.about-para-list {
+.about-link-list {
     display: none;
 }
 
 @media (min-width: 768px) {
-  .about-para-list {
+  .about-link-list {
     display: block;
     margin-top: 0.5rem;
     list-style: none;
