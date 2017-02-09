@@ -1276,8 +1276,8 @@ textarea.contact-form-input {
         linear-gradient(
           to right,
           #fff,
-          #fff 73%,
-          var(--color-background) 73%
+          #fff 68%,
+          var(--color-background) 68%
         );
   }
 }
