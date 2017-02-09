@@ -239,19 +239,22 @@ textarea {
 ----------------------------------------------*/
 
 .navigation {
+  position: fixed;
+  bottom: 0px;
   order: 1;
   width: 100%;
   background: #fff;
-  border-bottom: solid 5rem var(--color-background);
   user-select: none;
+  z-index: 999;
 }
 
 @media (min-width: 768px) {
   .navigation {
+    position: static;
+    bottom: auto;
     display: block;
     order: 0;
     background: var(--color-background);
-    border-bottom: 0;
   }
 }
 
@@ -473,10 +476,16 @@ button stuck in hover state */
 .main-footer {
   width: 100%;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 7rem;
   background: var(--color-background);
   color: #fff;
   font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .main-footer {
+    padding-bottom: 1rem;
+  }
 }
 
 .main-footer-container {
@@ -487,6 +496,7 @@ button stuck in hover state */
   margin-left: auto;
   margin-right: auto;
 }
+
 
 @media (min-width: 768px) {
   .main-footer-container {
