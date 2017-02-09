@@ -327,6 +327,7 @@ textarea {
   background: var(--color-accent);
   color: #fff;
   border-radius: 1rem / 1.5rem;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
