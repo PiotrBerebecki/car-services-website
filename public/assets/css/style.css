@@ -323,7 +323,10 @@ textarea {
 
 .call-button {
   margin-left: 0.5rem;
-  padding: 0.2rem 0.7rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
   background: var(--color-accent);
   color: #fff;
   border-radius: 1rem / 1.5rem;
