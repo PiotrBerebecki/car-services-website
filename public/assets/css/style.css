@@ -1,23 +1,7 @@
-/* Developemnt styles - delete for production */
-
-main, .about {
-/*   display: none!important; */
-}
-
-.border {
-  border: solid 1px rgba(0,0,0,0.1);
-}
-
-/* ------------------------------------------ */
-
-
-
-
 /*----------------------------------------------
   [TABLE OF CONTENTS]
 
   [SHARED STYLES]
-    VARIABLES
     GENERAL
     HEADER
     NAVIGATION
@@ -29,39 +13,6 @@ main, .about {
     CONTACT, OFFERTE, AFSPRAAK, BEDANKT
     PRIJZEN
 ----------------------------------------------*/
-
-
-
-
-
-/*---------------------------------------------
-  $VARIABLES
-----------------------------------------------*/
-
-:root {
-  --content-width: 95%;
-  --text-color-black: #636363;
-  --color-background: #436475;
-  --color-accent: #1eb62d;
-}
-
-@media (min-width: 1200px) {
-  :root {
-    --content-width: 83%;
-  }
-}
-
-@media (min-width: 1400px) {
-  :root {
-    --content-width: 70%;
-  }
-}
-
-@media (min-width: 2000px) {
-  :root {
-    --content-width: 1200px;
-  }
-}
 
 
 
@@ -82,9 +33,16 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -126,12 +84,36 @@ textarea {
 ----------------------------------------------*/
 
 .main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: var(--content-width);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 95%;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
+}
+
+@media (min-width: 1200px) {
+  .main-header {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-header {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .main-header {
+    width: 1200px;
+  }
 }
 
 .logo-link {
@@ -159,7 +141,7 @@ textarea {
 
 .company-strapline {
   margin-left: 0.5rem;
-  color: var(--text-color-black);
+  color: #636363;
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.1rem;
@@ -193,27 +175,40 @@ textarea {
 }
 
 .phone-number-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 0.15rem;
 }
 
 .phone-symbol {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 2.4rem;
   height: 2.4rem;
   margin-right: 1rem;
-  background: var(--color-accent);
+  background: #1eb62d;
   color: #fff;
   border-radius: 50%;
 }
 
 .phone-symbol .fa-phone {
   font-size: 1.7rem;
-  transform: translateY(5%);
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
 }
 
 .phone-number {
@@ -241,10 +236,15 @@ textarea {
 .navigation {
   position: fixed;
   bottom: 0px;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   width: 100%;
   background: #fff;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   z-index: 999;
 }
 
@@ -253,18 +253,26 @@ textarea {
     position: static;
     bottom: auto;
     display: block;
-    order: 0;
-    background: var(--color-background);
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    background: #436475;
   }
 }
 
 .navigation-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
-  width: var(--content-width);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
   font-size: 1.1rem;
 }
 
@@ -280,9 +288,31 @@ textarea {
   }
 }
 
+@media (min-width: 1200px) {
+  .navigation-container {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navigation-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .navigation-container {
+    width: 1200px;
+  }
+}
+
 .navigation-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
@@ -296,7 +326,7 @@ textarea {
 }
 
 .navigation-link {
-  color: var(--color-background);
+  color: #436475;
 }
 
 @media (min-width: 768px) {
@@ -308,7 +338,7 @@ textarea {
 
 .divider {
   height: 2rem;
-  border-left: solid 1px var(--color-background);
+  border-left: solid 1px #436475;
   border-right: 1px solid #8fa1ad;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -327,7 +357,7 @@ textarea {
   padding-bottom: 0.3rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
-  background: var(--color-accent);
+  background: #1eb62d;
   color: #fff;
   border-radius: 1rem / 1.5rem;
   text-decoration: none;
@@ -358,19 +388,26 @@ textarea {
 ----------------------------------------------*/
 
 .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding-top: 1rem;
 }
 
 .text-accent {
-  color: var(--color-accent);
+  color: #1eb62d;
 }
 
 .text-accent-strong {
-  color: var(--color-accent);
+  color: #1eb62d;
   font-weight: 700;
 }
 
@@ -394,13 +431,16 @@ textarea {
   border: none;
   outline: none;
   border-radius: 5px;
-  background: var(--color-accent);
+  background: #1eb62d;
   color: #fff;
   font-size: 1.7rem;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
@@ -420,12 +460,14 @@ button stuck in hover state */
 @media (min-width: 769px) {
   .button-accent:hover {
     background: #2ec93b;
+    -webkit-transition: background 100ms ease-in-out;
     transition: background 100ms ease-in-out;
   }
 }
 
 .button-accent:active {
   background: #1a9924;
+  -webkit-transition: background 0ms ease-in-out;
   transition: background 0ms ease-in-out;
 }
 
@@ -440,13 +482,18 @@ button stuck in hover state */
 
 .suppliers {
   width: 100%;
-  background: var(--color-background);
+  background: #436475;
 }
 
 .suppliers-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   margin-top: 0.9rem;
@@ -455,9 +502,27 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .suppliers-container {
-    width: var(--content-width);
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .suppliers-container {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .suppliers-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .suppliers-container {
+    width: 1200px;
   }
 }
 
@@ -465,7 +530,8 @@ button stuck in hover state */
   max-width: 22%;
   max-height: 1.5rem;
   height: auto;
-  filter: brightness(145%);
+  -webkit-filter: brightness(145%);
+          filter: brightness(145%);
   opacity: 0.8;
 }
 
@@ -481,7 +547,7 @@ button stuck in hover state */
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 5.5rem;
-  background: var(--color-background);
+  background: #436475;
   color: #fff;
   font-weight: 300;
 }
@@ -493,28 +559,65 @@ button stuck in hover state */
 }
 
 .main-footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: var(--content-width);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
-
 @media (min-width: 768px) {
   .main-footer-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-footer-container {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-footer-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .main-footer-container {
+    width: 1200px;
   }
 }
 
 .footer-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -535,7 +638,9 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .footer-opening-hours-container {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 28%;
   }
 }
@@ -637,8 +742,12 @@ button stuck in hover state */
 }
 
 .social-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -648,9 +757,15 @@ button stuck in hover state */
 }
 
 .social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 1rem;
   margin-right: 1rem;
   width: 3rem;
@@ -659,7 +774,10 @@ button stuck in hover state */
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
+  -webkit-transition: -webkit-filter 100ms ease-in-out;
+  transition: -webkit-filter 100ms ease-in-out;
   transition: filter 100ms ease-in-out;
+  transition: filter 100ms ease-in-out, -webkit-filter 100ms ease-in-out;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -668,14 +786,22 @@ button stuck in hover state */
 button stuck in hover state */
 @media (min-width: 769px) {
   .social-button:hover {
-    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+    -webkit-transition: -webkit-filter 100ms ease-in-out;
+    transition: -webkit-filter 100ms ease-in-out;
     transition: filter 100ms ease-in-out;
+    transition: filter 100ms ease-in-out, -webkit-filter 100ms ease-in-out;
   }
 }
 
 .social-button:active {
-  filter: brightness(85%);
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  -webkit-transition: -webkit-filter 0ms ease-in-out;
+  transition: -webkit-filter 0ms ease-in-out;
   transition: filter 0ms ease-in-out;
+  transition: filter 0ms ease-in-out, -webkit-filter 0ms ease-in-out;
 }
 
 .twitter {
@@ -706,18 +832,50 @@ button stuck in hover state */
 ----------------------------------------------*/
 
 .offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-color-black);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #636363;
 }
 
 @media (min-width: 768px) {
   .offer {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: var(--content-width);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .offer {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .offer {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .offer {
+    width: 1200px;
   }
 }
 
@@ -739,19 +897,39 @@ button stuck in hover state */
 @media (min-width: 768px) {
   .offer-image-desktop {
     display: block;
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 38%;
     height: 100%;
   }
 }
 
 .offer-text {
-  width: var(--content-width);
+  width: 95%;
 }
 
 @media (min-width: 768px) {
   .offer-text {
     width: 62%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .offer-text {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .offer-text {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .offer-text {
+    width: 1200px;
   }
 }
 
@@ -781,7 +959,7 @@ button stuck in hover state */
 
 .offer .fa-check {
   margin-right: 0.3rem;
-  color: var(--color-accent);
+  color: #1eb62d;
   font-size: 1.6rem;
   font-weight: 800;
 }
@@ -819,18 +997,29 @@ button stuck in hover state */
 
 
 .showreal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  color: var(--text-color-black);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #636363;
 }
 
 @media (min-width: 768px) {
   .showreal {
-    align-content: space-between;
-    justify-content: space-between;
-    width: var(--content-width);
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
     height: 29rem;
   }
 }
@@ -844,26 +1033,40 @@ button stuck in hover state */
 @media (min-width: 1200px) {
   .showreal {
     height: 27rem;
+    width: 83%;
   }
 }
 
 @media (min-width: 1400px) {
   .showreal {
     height: 26rem;
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .showreal {
+    width: 1200px;
   }
 }
 
 .reviews-container {
-  width: var(--content-width);
+  width: 95%;
 }
 
 @media (min-width: 768px) {
   .reviews-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 60%;
-    /*height: 78%;*/
   }
 }
 
@@ -872,7 +1075,7 @@ button stuck in hover state */
   margin-top: 2rem;
   margin-bottom: 1.2rem;
   padding-bottom: 0.5rem;
-  border-bottom: solid 1px var(--color-accent);
+  border-bottom: solid 1px #1eb62d;
   font-size: 1.4rem;
   font-weight: 600;
 }
@@ -896,19 +1099,21 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .slider-container {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 34%;
   }
 }
 
 .slider-header {
   margin-bottom: 1.5rem;
-  width: var(--content-width);
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .slider-header {
     width: 100%;
     margin-bottom: 1.8rem;
@@ -924,7 +1129,7 @@ button stuck in hover state */
 }
 
 .showreal .button-accent {
-  width: var(--content-width);
+  width: 95%;
 }
 
 @media (min-width: 768px) {
@@ -934,7 +1139,6 @@ button stuck in hover state */
     margin-bottom: auto;
   }
 }
-
 
 
 
@@ -970,9 +1174,16 @@ button stuck in hover state */
 }
 
 .workshop {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -1001,23 +1212,55 @@ button stuck in hover state */
 ----------------------------------------------*/
 
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-color-black);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #636363;
 }
 
 @media (min-width: 768px) {
   .contact {
-    width: var(--content-width);
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    width: 95%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .contact {
+    width: 1200px;
   }
 }
 
 .contact-container {
-  width: var(--content-width);
+  width: 95%;
 }
 
 @media (min-width: 768px) {
@@ -1028,14 +1271,16 @@ button stuck in hover state */
 
 @media (min-width: 768px) {
   .contact-container.offerte {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 72%;
   }
 }
 
 @media (min-width: 768px) {
   .contact-container.bedankt {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
   }
 }
@@ -1084,23 +1329,40 @@ button stuck in hover state */
 }
 
 .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .contact-form {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 .contact-form-column-one,
 .contact-form-column-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
@@ -1120,18 +1382,19 @@ button stuck in hover state */
   margin-top: 0.5rem;
   padding: 0.5rem;
   background: #f2f2f2;
-  color: var(--text-color-black);
+  color: #636363;
   font-family: Arial;
   font-size: 1rem;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
   outline: none;
+  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
 .contact-form-input:focus {
-  box-shadow: 0 0 5px var(--color-background);
-  border: 1px solid var(--color-background);
+  box-shadow: 0 0 5px #436475;
+  border: 1px solid #436475;
 }
 
 @media (min-width: 768px) {
@@ -1201,17 +1464,42 @@ textarea.contact-form-input {
 ----------------------------------------------*/
 
 .packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: var(--content-width);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
   padding-bottom: 1rem;
-  color: var(--text-color-black);
+  color: #636363;
 }
 
 @media (min-width: 768px) {
   .packages {
-    width: var(--content-width);
+    width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .packages {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .packages {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .packages {
+    width: 1200px;
   }
 }
 
@@ -1248,24 +1536,43 @@ textarea.contact-form-input {
 }
 
 .packages-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
 .package-single {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding: 1rem 1rem;
 }
 
 @media (min-width: 768px) {
   .package-single {
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -1292,7 +1599,7 @@ textarea.contact-form-input {
   width: 103%;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-  background: var(--color-background);
+  background: #436475;
   color: #fff;
   border: solid 1px #e6e6e6;
   border-radius: 1rem;
@@ -1303,11 +1610,18 @@ textarea.contact-form-input {
     padding-left: 2rem;
     padding-right: 2rem;
     background-image:
+        -webkit-linear-gradient(
+          left,
+          #fff,
+          #fff 68%,
+          #436475 68%
+        );
+    background-image:
         linear-gradient(
           to right,
           #fff,
           #fff 68%,
-          var(--color-background) 68%
+          #436475 68%
         );
   }
 }
@@ -1348,7 +1662,8 @@ textarea.contact-form-input {
   width: auto;
   left: 100%;
   top: 0%;
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 @media (min-width: 768px) {
@@ -1358,13 +1673,20 @@ textarea.contact-form-input {
 }
 
 .package-single-number {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .package-single-cars {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   z-index: 9;
 }
@@ -1372,7 +1694,8 @@ textarea.contact-form-input {
 @media (min-width: 768px) {
   .package-single-cars {
     width: 60%;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     font-size: 1.1rem;
   }
 }
@@ -1423,9 +1746,14 @@ textarea.contact-form-input {
 }
 
 .package-single-points {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   margin: 0rem auto;
   font-size: 0.8rem;
@@ -1434,8 +1762,13 @@ textarea.contact-form-input {
 
 @media (min-width: 768px) {
   .package-single-points {
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     font-size: 1.1rem;
     font-weight: 400;
   }
@@ -1455,7 +1788,7 @@ textarea.contact-form-input {
 
 .package-single-points .fa-check {
   margin-right: 0.3rem;
-  color: var(--color-accent);
+  color: #1eb62d;
   font-size: 1.2rem;
 }
 
@@ -1488,34 +1821,68 @@ textarea.contact-form-input {
   }
 }
 
-
-
 .other-packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding-top: 0.5rem;
-  color: var(--text-color-black);
+  color: #636363;
 }
 
 @media (min-width: 768px) {
   .other-packages {
-    width: var(--content-width);
+    width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .other-packages {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .other-packages {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .other-packages {
+    width: 1200px;
   }
 }
 
 .other-packages-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  width: var(--content-width);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
 }
 
 @media (min-width: 768px) {
   .other-packages-container {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
   }
 }
@@ -1551,9 +1918,15 @@ textarea.contact-form-input {
 }
 
 .button-accent.inside-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   height: 2rem;
   padding: 0 0.3rem;
