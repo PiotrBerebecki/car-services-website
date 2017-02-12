@@ -2,12 +2,13 @@ console.clear();
 
 // Show borders of all DOM elements on click
 (function() {
-  const bodyDOM = document.querySelector('body');
-  const bodyElementsDOM = bodyDOM.querySelectorAll('*');
-  const elementDOM = document.querySelector('.company-strapline');
+  var bodyDOM = document.querySelector('body');
+  var bodyElementsDOM = bodyDOM.getElementsByTagName('*');
+  var elementDOM = document.querySelector('.company-strapline');
 
-  const showBOXModel = () => {
-    bodyElementsDOM.forEach(el => {
+  var showBOXModel = function() {
+    [].forEach.call(bodyElementsDOM, function(el) {
+      
       el.classList.toggle('border');
     });
   };
