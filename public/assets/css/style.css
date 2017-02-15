@@ -841,9 +841,24 @@ button stuck in hover state */
   font-size: 0.8rem;
 }
 
+#home-text-button {
+    color: #FFF;
+    text-decoration: underline;
+}
 
+#home-text {
+    display: none;
+}
 
+#home-text p {
+    margin-top: 20px;
+}
 
+#home-text h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
 
 /*---------------------------------------------
   $HOME - OFFER
@@ -1032,6 +1047,12 @@ button stuck in hover state */
   color: #636363;
 }
 
+@media (max-width: 768px) {
+    .showreal {
+        width: 100%;
+    }
+}
+
 @media (min-width: 768px) {
   .showreal {
     -ms-flex-line-pack: justify;
@@ -1160,8 +1181,21 @@ button stuck in hover state */
   }
 }
 
+ #lightSlider {
+    width: 100%;
+    display: block;
+}
+
+#lightSlider li img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
 
 
+#recensionSlider .review p {
+    padding-bottom: 20px;
+}
 
 
 /*---------------------------------------------

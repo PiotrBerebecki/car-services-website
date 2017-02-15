@@ -5,6 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Buitenbos</title>
+  <link type="text/css" rel="stylesheet" href="./public/assets/slider/css/lightslider.css" />                  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./public/assets/css/style.css">
   <link rel="shortcut icon" href="./public/assets/images/shared/favicon.ico">
@@ -97,27 +99,59 @@
 
       <div class="reviews-container">
 
-        <header class="showreal-header reviews-header">Klant recentie’s</header>
+        <header class="showreal-header reviews-header">Klant recensies</header>
 
-        <div class="review">
-          <header class="review-header">Frans Weinbeck uit Rijswijk:</header>
-          <p class="review-text">“Ik heb nu van 3 auto’s de ruiten laten tinten en ik ben daar zeer tevreden over.
-            Het is perfect gedaan en het was snel klaar. Ik voel me een tevreden klant bij Buitenbos
-            Customs en daarom kan ik dit bedrijf aan iedereen aanraden!”</p>
-        </div>
-
-        <div class="review">
-          <header class="review-header">Fahad ibn Mansour uit Zoetermeer:</header>
-          <p class="review-text">“Ramen laten tinten: achterruit, twee zijruiten voor en achter. Tinten is erg goed en snel
-            gedaan. Er is goed op maat gesneden en kwalitatieve folie gebruikt i.p.v. goedkoop spul.
-            Met name de afwerking is erg goed, het lijkt nu fabriek-af”</p>
-        </div>
-
+        <ul id="recensionSlider">
+            <li>
+                <div class="review">
+                <header class="review-header">Frans Weinbeck uit Rijswijk:</header>
+                <p class="review-text">“Ik heb nu van 3 auto’s de ruiten laten tinten en ik ben daar zeer tevreden over.
+                    Het is perfect gedaan en het was snel klaar. Ik voel me een tevreden klant bij Buitenbos
+                    Customs en daarom kan ik dit bedrijf aan iedereen aanraden!”</p>
+                </div>
+            </li>
+            <li>
+                <div class="review">
+                <header class="review-header">Fahad ibn Mansour uit Zoetermeer:</header>
+                <p class="review-text">“Ramen laten tinten: achterruit, twee zijruiten voor en achter. Tinten is erg goed en snel
+                    gedaan. Er is goed op maat gesneden en kwalitatieve folie gebruikt i.p.v. goedkoop spul.
+                    Met name de afwerking is erg goed, het lijkt nu fabriek-af”</p>
+                </div>
+            </li>
+            <li>
+                <div class="review">
+                    <header class="review-header">Stefan Hoek uit Katwijk:</header>
+                    <p class="review-text">“Zeer goed geholpen, nette prijzen en prijs informatie ook zeer duidelijk en snel antwoord op mijn vragen gehad”</p>
+                </div>
+            </li>
+            <li>
+                <div class="review">
+                    <header class="review-header">Laurette ketting uit katwijk:</header>
+                    <p class="review-text">“Ik heb mijn achterraam laten tinten en een grote schoonmaak laten doen door Buitenbos customs. Een echte aanrader! Snel klaar en weer een lekkere frisse auto! Bedankt mensen van Buitenbos Customs!” </p>
+                </div>
+            </li>
+        </ul>
       </div>
 
       <figure class="slider-container">
-        <figcaption class="showreal-header slider-header">Recent getint auto’s</figcaption>
-        <img class="slider" src="./public/assets/images/slider-desktop/autoramen-tinten blinderen2.png" alt="photo recent getint auto">
+          <figcaption class="showreal-header slider-header">Recent getint auto’s</figcaption>
+
+          
+            <ul id="lightSlider">
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen2.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen3.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen4.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen5.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen6.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen7.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen8.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen9.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen10.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen11.jpg" /></li>
+            <li><img src="./public/assets/images/slider-desktop/Autoramen-tinten-blinderen12.jpg" /></li>
+            </ul>
+        <!--<figcaption class="showreal-header slider-header">Recent getint auto’s</figcaption>
+        <img class="slider" src="./public/assets/images/slider-desktop/autoramen-tinten blinderen2.png" alt="photo recent getint auto">-->
       </figure>
 
       <a href="./public/prijzen.html" class="button-accent home">Kies uw pakket</a>
@@ -137,10 +171,21 @@
 
       <section class="about">
         <header class="footer-title">Autoramen tinten of blinderen</header>
-        <p class="about-para">De autoramen tinten of blinderen? We brengen folie aan de binnenzijde van het raam aan, waardoor er een mooie geblindeerde uitstraling ontstaat. De folie is verkrijgbaar in verschillende uitvoeringen, afhankelijk van de mate van lichtdoorlatendheid. Uiteraard kunnen we u voorlichten over de regelgeving omtrent het blinderen van de autoramen, zodat u netjes binnen de kaders van de wet blijft. Verder lezen…</p>
+        <p class="about-para">De autoramen tinten of blinderen? We brengen folie aan de binnenzijde van het raam aan, waardoor er een mooie geblindeerde uitstraling ontstaat. De folie is verkrijgbaar in verschillende uitvoeringen, afhankelijk van de mate van lichtdoorlatendheid. Uiteraard kunnen we u voorlichten over de regelgeving omtrent het blinderen van de autoramen, zodat u netjes binnen de kaders van de wet blijft. <a id="home-text-button" href="javascript:;">Verder lezen…</a></p>
+        <div id="home-text">
+            
+            <p>Blinderende folie op de autoramen heeft een aantal verschillende functies. Ten eerste zorgt het voor een stoere en sportieve uitstraling van de auto. Daarnaast vermindert u de mate van inkijk in de auto en helpt de folie UV-straling van de zon veel beter te weerkaatsen.</p>
+            <p>Autoramen blinderen biedt een aantal belangrijke voordelen, vooral omdat we werken met hoogwaardige folie met diverse prettige eigenschappen. Het gaat bijvoorbeeld om hoogwaardige folie, waarop we standaard levenslang garantie bieden. Dat betekent dat u tijdens de rest van de gebruiksduur van de auto zonder zorgen gebruik kunt maken van de mooie folie op de autoruiten.</p>
+            <p>We kunnen al autoramen tinten vanaf €169, zodat u daar standaard een scherpe prijs voor betaalt. We garanderen een kleurvaste folie, waardoor u geen last heeft van eventuele verkleuringen. Bovendien zorgt u er met de folie voor dat u tot 95% minder last heeft van het zonlicht, dankzij betere weerkaatsing. De folie zorgt er tegelijkertijd voor dat u 56% minder last heeft van warmte door de ruit, dankzij de energieweerkaatsing door de folie. Tenslotte beperkt de folie de inkijk in de auto, waardoor u veel minder last zal hebben van inbraak en diefstal.</p>
+            <h2>Regelgeving autoramen tinten</h2>
+            <p>Als we autoramen tinten doen we dat uiteraard netjes binnen de wettelijke normen zoals die zijn opgesteld door het Openbaar Ministerie. Het is bijvoorbeeld niet toegestaan om de voorruit met ieder willekeurig folie te tinten of blinderen, omdat dit de lichtinval en daarmee de veiligheid in het geding kan brengen. Hiervoor hebben wij de juiste tint in huis. Dit geld ook voor de zijruiten van de voorportieren.</p>
+            <p>Het is wel toegestaan om de zijruiten van de achterportieren en de achterruit te tinten of blinderen zo donker als u wenst, op basis van de Europese richtlijn 92/22/EEG. </p>
+
+        </div>
+
         <ul class="about-link-list">
-          <li><a class="link-text" href="public/wrappen.html">Auto wrappen</a></li>
-          <li><a class="link-text" href="/index.html">Auto poetsen</a></li>
+          <li><a class="link-text" href="http://www.buitenbospc.nl/wrappen.html">Auto wrappen</a></li>
+          <li><a class="link-text" href="http://www.buitenbospc.nl/">Auto poetsen</a></li>
           <li><a class="link-text" href="http://buitenbosautos.nl/" target="_blank">Apk keuring</a></li>
         </ul>
       </section>
@@ -170,7 +215,8 @@
     </div>
 
   </footer><!-- END OF MAIN FOOTER -->
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./public/assets/slider/js/lightslider.js"></script>
   <script src="./public/assets/js/script.js"></script>
 
 </body>
