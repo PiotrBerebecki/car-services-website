@@ -43,13 +43,35 @@ $(document).ready(function() {
         loop: true
     }); 
 
+    console.log("reported screen width");
+    console.log(window.screen.width);
+
+    var recesionSliderHeight = 240;
+
+    if(window.screen.width < 500) {
+        recesionSliderHeight = 340;
+    }
+
+    
+
     $('#recensionSlider').lightSlider({
         item: 2,
         vertical: true,
         adaptiveHeight: true,
         gallery: false,
         pager: false,
-        verticalHeight: 240,
+        verticalHeight: recesionSliderHeight,
+        auto: true,
+        loop: true
+    })
+
+    $('#recensionSliderSide').lightSlider({
+        item: 2,
+        vertical: true,
+        adaptiveHeight: true,
+        gallery: false,
+        pager: false,
+        verticalHeight: 340,
         auto: true,
         loop: true
     })

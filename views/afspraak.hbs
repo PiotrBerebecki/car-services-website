@@ -8,20 +8,25 @@
           <div class="contact-info">
             <h2 class="contact-info-header">Prijs indicatie</h2>
             <p>Hieronder een indicatie van de prijs voor de diensten die u wenst af te nemen. Op het moment dat u deze verder invult en verzend, krijgt u een bevestiging per mail en nemen wij binnen 1 werkdag contact met u op.</p>
+            {{#if packet}}
             <ul class="appointment-pack-offer">
               <li><span class="text-regular-strong">Dienst: </span>Ramen tinten</li>
-              <li><span class="text-regular-strong">Pakket: </span>Pakket 2</li>
-              <li><span class="text-regular-strong">Prijs: </span>&euro; 239,-</li>
+              <li><span class="text-regular-strong">Pakket: </span>{{packet.name}}</li>
+              <li><span class="text-regular-strong">Prijs: </span>&euro; {{packet.price}},-</li>
             </ul>
+            {{/if}}
           </div>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" method="post">
           <div class="contact-form-column-one">
+            {{#if packet}}
+                <input name="packet" value="{{packet.id}}" type="hidden" />
+            {{/if}}
             <input name="name" class="contact-form-input" type="text" placeholder="* Naam" required autocomplete="name">
             <input name="email" class="contact-form-input" type="text" placeholder="* Email" required autocomplete="email">
             <input name="phone" class="contact-form-input" type="text" placeholder="* Tel. nummer" required autocomplete="tel">
-            <input class="contact-form-input" type="text" placeholder="* Gewenste datum">
+            <input name="date" class="contact-form-input" type="text" placeholder="* Gewenste datum">
           </div>
           <div class="contact-form-column-two">
             <textarea class="contact-form-input" placeholder="* Bericht"></textarea>
@@ -38,11 +43,13 @@
 
       </div>
 
-      <div class="contact-review-container">
+      {{!--<div class="contact-review-container">
         <header class="contact-review-header">Klant recentie’s</header>
         <p class="contact-review-text">“Dit is een faketekst. Alles wat hier staat is slechts om een indruk te geven van het grafische effect van tekst op deze plek. Wat u hier leest is een voorbeeldtekst. Deze wordt later vervangen door de uiteindelijke tekst, die nu nog niet bekend is”</p>
         <p class="contact-review-text">“Dit is een faketekst. Alles wat hier staat is slechts om een indruk te geven van het grafische effect van tekst op deze plek. Wat u hier leest is een voorbeeldtekst. Deze wordt later vervangen door de uiteindelijke tekst, die nu nog niet bekend is”</p>
-      </div>
+      </div>--}}
+
+      {{>recension-slider-side}}
 
     </section><!-- END OF CONTACT -->
 

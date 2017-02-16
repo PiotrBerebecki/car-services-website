@@ -975,6 +975,12 @@ button stuck in hover state */
   font-weight: 600;
 }
 
+@media (max-width: 359px) {
+    .offer-title {
+        font-size: 0.8rem;
+    }
+}
+
 @media (min-width: 400px) {
   .offer-title {
     font-size: 1rem;
@@ -1001,6 +1007,14 @@ button stuck in hover state */
 
 .offer li {
   font-size: 0.9rem;
+}
+
+@media (max-width: 359px) {
+
+    .offer li {
+        font-size: 0.8rem;
+    }
+
 }
 
 @media (min-width: 400px) {

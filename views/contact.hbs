@@ -15,26 +15,28 @@
           </div>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" method="post">
           <div class="contact-form-column-one">
             <input name="name" class="contact-form-input" type="text" placeholder="* Naam" required autocomplete="name">
             <input name="email" class="contact-form-input" type="text" placeholder="* Email" required autocomplete="email">
             <input name="phone" class="contact-form-input" type="text" placeholder="* Tel. nummer" required autocomplete="tel">
-            <input class="contact-form-input" type="text" placeholder="* Gewenste datum">
+            <input name="date" class="contact-form-input" type="text" placeholder="* Gewenste datum">
           </div>
           <div class="contact-form-column-two">
             <textarea class="contact-form-input" placeholder="* Bericht"></textarea>
-            <input type="submit" class="button-accent" value="Verzand">
+            <input type="submit" class="button-accent" value="Verzend">
           </div>
         </form>
 
       </div>
 
-      <div class="contact-review-container">
+      {{!--<div class="contact-review-container">
         <header class="contact-review-header">Klant recentie’s</header>
         <p class="contact-review-text">“Dit is een faketekst. Alles wat hier staat is slechts om een indruk te geven van het grafische effect van tekst op deze plek. Wat u hier leest is een voorbeeldtekst. Deze wordt later vervangen door de uiteindelijke tekst, die nu nog niet bekend is”</p>
         <p class="contact-review-text">“Dit is een faketekst. Alles wat hier staat is slechts om een indruk te geven van het grafische effect van tekst op deze plek. Wat u hier leest is een voorbeeldtekst. Deze wordt later vervangen door de uiteindelijke tekst, die nu nog niet bekend is”</p>
-      </div>
+      </div>--}}
+
+      {{>recension-slider-side}}
 
     </section><!-- END OF CONTACT -->
 
