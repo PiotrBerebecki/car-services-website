@@ -6,9 +6,17 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
+const config = require('../config');
+const q = require('q');
 var hbs = require('hbs');
 
+
 var app = express();
+
+// Note that the following smptp configuration is in a configuration where
+// Google apps is used and an smtp relay service is set up allowing connections 
+// from ips that are whitelisted in the smtp relay service.
+var transporter = nodemailer.createTransport('smtps://' + config.mail.server);
 
 var services = [
     { 
@@ -71,11 +79,11 @@ app.post('/afspraak.html', postMakeAppointment, (req, res, next) => {
 });
 
 app.post('/offerte.html', postMakeOffer, (req, res, next) => {
-    res.render('bedankt', { title: 'Buitenbos Customs' });
+    res.render('offerte-bedankt', { title: 'Buitenbos Customs' });
 });
 
-app.post('/contact.html', postContact, (req, res, next) => {
-    res.render('bedankt', { title: 'Buitenbos Customs' });
+app.post('/contact.html', postContactRequest, (req, res, next) => {
+    res.render('contact-bedankt', { title: 'Buitenbos Customs' });
 });
 
 
@@ -97,6 +105,9 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
+  console.log("An error occurred somewhere");
+  console.log(err);
+
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
@@ -118,20 +129,206 @@ app.listen(port, () => {
 
 function postMakeAppointment(req, res, next) {
     // req.body = name, email, phone, date, packet
+    var packet;
+    var name = req.body.name;
+    var email = req.body.email;
+    var phone = req.body.phone;
+    var date = req.body.date;
+    var message = req.body.message;
+    
+    if(req.body.packet) {
+        packet = services[0].packets.filter(x => x.id == req.body.packet)[0]; 
+    }
+
     // Place email logic here
-    next();
+    var promise;
+    if(email && email.match(/.*?@.+?\..+/)) {
+        promise = promise ? promise.then(() => {
+            return sendMailFromTemplate(
+                "email/afspraak-mail-client", 
+                { name: name, packet: packet }, 
+                "Uw afspraak bij buitenbos customs",
+                "info@buitenbospc.nl",
+                email
+            );
+        }) : sendMailFromTemplate(
+            "email/afspraak-mail-client", 
+            { name: name, packet: packet }, 
+            "Uw afspraak bij buitenbos customs",
+            "info@buitenbospc.nl",
+            email
+        );
+    }
+    promise = promise ? promise.then(() => {
+        return sendMailFromTemplate(
+            "email/afspraak-mail-owner",
+            { name: name, email: email, phone: phone, date: date, message:message, packet: packet },
+            "Een nieuwe afspraak verzoek van " + name,
+            "info@buitenbospc.nl",
+            "info@buitenbospc.nl" 
+        );
+    }) : sendMailFromTemplate(
+        "email/afspraak-mail-owner",
+        { name: name, email: email, phone: phone, date: date, message:message, packet: packet },
+        "Een nieuwe afspraak verzoek van " + name,
+        "info@buitenbospc.nl",
+        "info@buitenbospc.nl" 
+    );
+
+    if(promise) {
+        promise.then(() => {
+            next();
+        }).catch((err) => {
+            next(err);
+        })
+    } else {
+        next();
+    }
 }
 
 function postMakeOffer(req, res, next) {
     // req.body = name, email, phone, date
     // Place email logic here
-    next();
+     var name = req.body.name;
+    var email = req.body.email;
+    var phone = req.body.phone;
+    var date = req.body.date;
+    var message = req.body.message;
+
+    // Place email logic here
+    var promise;
+    if(email && email.match(/.*?@.+?\..+/)) {
+        promise = promise ? promise.then(() => {
+            return sendMailFromTemplate(
+                "email/offerte-mail-client", 
+                { name: name }, 
+                "Wij hebben uw offerte aanvraag ontvangen",
+                "info@buitenbospc.nl",
+                email
+            );
+        }) : sendMailFromTemplate(
+            "email/offerte-mail-client", 
+            { name: name }, 
+             "Wij hebben uw offerte aanvraag ontvangen",
+            "info@buitenbospc.nl",
+            email
+        );
+    }
+    promise = promise ? promise.then(() => {
+        return sendMailFromTemplate(
+            "email/offerte-mail-owner",
+            { name: name, email: email, phone: phone, date: date, message:message },
+            "Een nieuwe offerte aanvraag van " + name,
+            "info@buitenbospc.nl",
+            "info@buitenbospc.nl" 
+        );
+    }) : sendMailFromTemplate(
+        "email/offerte-mail-owner",
+        { name: name, email: email, phone: phone, date: date, message: message },
+        "Een nieuwe offerte aanvraag van " + name,
+        "info@buitenbospc.nl",
+        "info@buitenbospc.nl" 
+    );
+
+    if(promise) {
+        promise.then(() => {
+            next();
+        }).catch((err) => {
+            next(err);
+        })
+    } else {
+        next();
+    }
 }
 
 function postContactRequest(req, res, next) {
     // req.body = name, email, phone, date
     // Place email logic here
-    next();
+    var name = req.body.name;
+    var email = req.body.email;
+    var phone = req.body.phone;
+    var date = req.body.date;
+    var message = req.body.message;
+
+    // Place email logic here
+    var promise;
+    if(email && email.match(/.*?@.+?\..+/)) {
+        promise = promise ? promise.then(() => {
+            return sendMailFromTemplate(
+                "email/contact-mail-client", 
+                { name: name }, 
+                "Wij hebben uw contact verzoek ontvangen",
+                "info@buitenbospc.nl",
+                email
+            );
+        }) : sendMailFromTemplate(
+            "email/contact-mail-client", 
+            { name: name }, 
+             "Wij hebben uw contact verzoek ontvangen",
+            "info@buitenbospc.nl",
+            email
+        );
+    }
+    promise = promise ? promise.then(() => {
+        return sendMailFromTemplate(
+            "email/contact-mail-owner",
+            { name: name, email: email, phone: phone, date: date, message:message },
+            "Een nieuwe contact verzoek van " + name,
+            "info@buitenbospc.nl",
+            "info@buitenbospc.nl" 
+        );
+    }) : sendMailFromTemplate(
+        "email/contact-mail-owner",
+        { name: name, email: email, phone: phone, date: date, message: message },
+        "Een nieuwe contact verzoek van " + name,
+        "info@buitenbospc.nl",
+        "info@buitenbospc.nl" 
+    );
+
+    if(promise) {
+        promise.then(() => {
+            next();
+        }).catch((err) => {
+            next(err);
+        })
+    } else {
+        next();
+    }
 }
 
 /* end of form functions */
+
+function sendMailFromTemplate(template, data, subject, from, to) {
+    var execution = q.defer();
+    app.render(template, Object.assign({}, data, { layout: false}), (err, data) => {
+        if(err) {
+            return execution.reject(err);
+        }
+        sendMail( subject, data, from, to ).then(
+            () => {
+                execution.resolve();
+            },
+            (err) => {
+                execution.reject(err);
+            }
+        )
+    })
+    return execution.promise;
+}
+
+function sendMail(subject, body, from, to) {
+    var execution = q.defer();
+     var mailOptions = {
+        from: from,
+        to: to,
+        subject: subject,
+        html: body
+      }
+      transporter.sendMail(mailOptions, (error, info) => {
+        if(error) {
+          return execution.reject(error);
+        }
+        return execution.resolve();
+      })
+    return execution.promise;
+}
