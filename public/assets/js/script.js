@@ -39,7 +39,7 @@ $(document).ready(function() {
         gallery: false,
         pager: false,
         useCSS: false,
-        speed: 3000,
+        pause: 3000,
         auto: true,
         loop: true
     }); 
@@ -61,7 +61,7 @@ $(document).ready(function() {
         adaptiveHeight: true,
         gallery: false,
         pager: false,
-        speed: 5000,
+        pause: 5000,
         verticalHeight: recesionSliderHeight,
         auto: true,
         loop: true
@@ -73,7 +73,7 @@ $(document).ready(function() {
         adaptiveHeight: true,
         gallery: false,
         pager: false,
-        speed: 5000,
+        pause: 5000,
         verticalHeight: 340,
         auto: true,
         loop: true
