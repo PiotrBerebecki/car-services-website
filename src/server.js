@@ -5,6 +5,7 @@ const logger = require('logger');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const compression = require('compression');
 const fs = require('fs');
 const config = require('../config');
 const q = require('q');
@@ -40,6 +41,7 @@ hbs.registerPartial('recension-slider-side', fs.readFileSync(path.join(__dirname
 app.set('views', path.join(__dirname, '../views'));
 app.engine('hbs', hbs.__express)
 app.set('view engine', 'hbs');
+app.use(compression());
 app.use(bodyParser.urlencoded({
     extended: true
 }))
